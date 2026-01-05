@@ -1,0 +1,20 @@
+import { config } from "dotenv";
+
+config({ path: `.env.${process.env.NODE_ENV || 'development'}.local` });
+
+const {
+    PORT,
+    NODE_ENV,
+    DB_URI,
+    JWT_SECRET,
+    JWT_EXPIRE,
+    NODEMAILER_PASSWORD,
+    FRONTEND_URL,
+    REDIS_URL,
+    CLOUDINARY_CLOUD_NAME,
+    CLOUDINARY_API_KEY,
+    CLOUDINARY_API_SECRET,
+    RABBITMQ_URL,
+} = process.env;
+
+export { NODE_ENV, DB_URI, JWT_SECRET, JWT_EXPIRE, NODEMAILER_PASSWORD, FRONTEND_URL, PORT, REDIS_URL, CLOUDINARY_CLOUD_NAME, CLOUDINARY_API_KEY, CLOUDINARY_API_SECRET, RABBITMQ_URL };
